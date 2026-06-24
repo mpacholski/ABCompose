@@ -1,0 +1,9 @@
+# Python runtime and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Ephemeral build artifacts and external compilers
+compiler/
+out/
+.DS_Store
