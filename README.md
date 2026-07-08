@@ -29,6 +29,15 @@ To compile a `.abc` file, provide its path as an argument to the `./build.sh` sc
 
 This project includes pre-configured VS Code tasks (`.vscode/tasks.json`). Use the *Build* keyboard shortcut (default `Cmd+Shift+B`) to compile the `.abc` file currently active in the editor.
 
+## Convert to PNG
+
+To convert a `.abc` file to `.png`, provide its path as an argument to the `./converters/abc2png.py` script. The output will be saved in the `out/` directory. Example:
+
+```bash
+./.venv/bin/python3 ./converters/abc2png.py src/twinkle_bass.abc
+```
+or use VS Code *Build* task to convert the active file. The conversion requires MuseScore installed and setup correctly, and produces `.musicxml` file as a byproduct of the process.
+
 
 ## Recommended Extension
 
