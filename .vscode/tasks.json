@@ -2,25 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile ABC to MusicXML (All)",
-            "type": "shell",
-            "command": "./build.sh",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared"
-            },
-            "problemMatcher": []
-        },
-        {
             "label": "Compile ABC to MusicXML (Active File)",
             "type": "shell",
-            "command": "./build.sh ${fileBasename}",
+            "command": "if [ \"${fileExtname}\" = \".abc\" ]; then ./build.sh \"${file}\"; else echo \"Error: Active file is not an .abc file.\"; exit 1; fi",
             "group": "build",
             "presentation": {
                 "echo": true,
@@ -29,6 +13,6 @@
                 "panel": "shared"
             },
             "problemMatcher": []
-        }
+        },
     ]
 }

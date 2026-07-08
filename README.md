@@ -21,26 +21,14 @@ chmod +x setup.sh
 
 ## Compiling the Files
 
-### Via Terminal
-
-To compile all files in the `src/` folder:
-
-```bash
-./build.sh
-```
-
-To compile a specific file, provide the file path as an argument:
+To compile a `.abc` file, provide its path as an argument to the `./build.sh` script. The output will be saved in the `out/` directory. Example:
 
 ```bash
 ./build.sh src/twinkle_bass.abc
 ```
 
-### Via Visual Studio Code
+This project includes pre-configured VS Code tasks (`.vscode/tasks.json`). Use the *Build* keyboard shortcut (default `Cmd+Shift+B`) to compile the `.abc` file currently active in the editor.
 
-This project includes pre-configured VS Code tasks (`.vscode/tasks.json`).
-
-* Press `Cmd+Shift+B` to run the build task.
-* Select the task to compile all files in the `src/` directory, or select the task to compile only the `.abc` file currently active in the editor.
 
 ## Recommended Extension
 
